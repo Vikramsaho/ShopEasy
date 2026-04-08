@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+a:active {
+    color: rgb(40, 39, 39);
+    text-decoration: underline;
+}
+
+.one{
+    background-color: rgb(34, 146, 189);
+    border-radius: 15px;
+   
+}
+
+
+
+

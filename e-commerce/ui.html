@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEVI AI</title>
+
+<style>
+
+body{
+background:#0a0f1f;
+font-family:Segoe UI;
+color:white;
+margin:0;
+overflow:hidden;
+}
+
+.container{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+background:#0e1630;
+padding:20px;
+border-right:1px solid #1e2c55;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+color:#4fd1ff;
+margin-bottom:30px;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.menu div{
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.menu div:hover{
+background:#142a55;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+display:flex;
+flex-direction:column;
+padding:20px;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+font-size:28px;
+color:#6bd7ff;
+margin-bottom:15px;
+}
+
+/* CHAT */
+
+.chatbox{
+flex:1;
+background:#0f1835;
+border-radius:12px;
+padding:20px;
+box-shadow:0 0 20px rgba(0,200,255,.2);
+}
+
+.message{
+background:#14244a;
+padding:15px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.formula{
+margin-top:10px;
+padding:15px;
+border-radius:10px;
+background:#1c1f46;
+color:#b8aaff;
+font-family:monospace;
+}
+
+/* FILE PANEL */
+
+.files{
+margin-top:15px;
+background:#0f1835;
+padding:15px;
+border-radius:12px;
+}
+
+.file{
+padding:8px;
+border-bottom:1px solid #1e2c55;
+}
+
+/* INPUT */
+
+.inputbar{
+display:flex;
+margin-top:15px;
+}
+
+.inputbar input{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:none;
+background:#111c3b;
+color:white;
+}
+
+.inputbar button{
+margin-left:10px;
+padding:12px 18px;
+background:#3a8dff;
+border:none;
+border-radius:8px;
+color:white;
+cursor:pointer;
+}
+
+/* RIGHT PANEL */
+
+.rightpanel{
+width:300px;
+background:#0e1630;
+padding:20px;
+border-left:1px solid #1e2c55;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.panel{
+background:#0f1835;
+padding:15px;
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,200,255,.1);
+}
+
+.panel h3{
+margin-top:0;
+color:#6bd7ff;
+}
+
+/* GLOW ORB */
+
+.orb{
+height:220px;
+border-radius:50%;
+background:radial-gradient(circle,#4fd1ff,#001133);
+box-shadow:0 0 60px #4fd1ff;
+margin-top:auto;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">DEVI AI</div>
+
+<div class="menu">
+<div>Chat</div>
+<div>Voice</div>
+<div>Coding</div>
+<div>Automation</div>
+<div>Memory</div>
+<div>Files</div>
+<div>Plugins</div>
+<div>Settings</div>
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="header">
+DEVI AI — Digital Enhanced Virtual Intelligence
+</div>
+
+<div class="chatbox">
+
+<div class="message">
+Explain transformers in AI
+</div>
+
+<div class="message">
+Transformers are neural networks that use attention mechanisms to understand context and generate text.
+</div>
+
+<div class="formula">
+Attention(Q,K,V) = softmax(QKᵀ / √dₖ) V
+</div>
+
+</div>
+
+<div class="files">
+
+<b>FILES</b>
+
+<div class="file">project_code.py</div>
+<div class="file">notes.txt</div>
+<div class="file">report.pdf</div>
+
+</div>
+
+<div class="inputbar">
+<input placeholder="Enter command...">
+<button>Send</button>
+</div>
+
+</div>
+
+<!-- RIGHT PANEL -->
+
+<div class="rightpanel">
+
+<div class="panel">
+<h3>DEVI STATUS</h3>
+Model : GPT-4<br>
+Voice : Active<br>
+Memory : Enabled<br>
+Agents Running : 3
+</div>
+
+<div class="panel">
+<h3>Agent Activity</h3>
+Searching Web...<br>
+Analyzing Document...<br>
+Running Script...
+</div>
+
+<div class="panel">
+<h3>Memory Log</h3>
+User : Vecna<br>
+Project : DEVI AI<br>
+Last Topic : LLM Architecture
+</div>
+
+<div class="orb"></div>
+
+</div>
+
+</div>
+
+<script>
+
+document.querySelector("button").onclick = function(){
+
+let input = document.querySelector("input").value;
+
+let msg = document.createElement("div");
+msg.className="message";
+msg.innerText=input;
+
+document.querySelector(".chatbox").appendChild(msg);
+
+document.querySelector("input").value="";
+
+}
+
+</script>
+
+</body>
+</html>
